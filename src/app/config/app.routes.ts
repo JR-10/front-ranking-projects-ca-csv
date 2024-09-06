@@ -9,7 +9,7 @@ export const routes: Routes = [
   },
   {
     path: 'project',
-    loadComponent: () => import('../UI/pages/project/list-projects/project.component').then(m => m.ProjectComponent)
+    loadComponent: () => import('../UI/pages/project/project.component').then(m => m.ProjectComponent)
   },
   // redireccion al home si no se encuentra la ruta
   {
