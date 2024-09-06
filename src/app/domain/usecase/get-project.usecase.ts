@@ -16,8 +16,8 @@ export class GetProjectUsecase {
         return  this.projectGateway.getAllProjects(); // hace un llamdado al metodo getAllProjects de la clase abstracta Project, para obtener todos los proyectos
     }
 
-    public getProjectsByFilter() {
-        return this.projectGateway.getProjectsByFilter(5, 'nameCategory'); // hace un llamado al metodo getProjectsByFilter de la clase abstracta Project, para obtener los proyectos que cumplan con el filtro
+    public getProjectsByFilter(numElenets: number, nameCategory: string) {
+        return this.projectGateway.getProjectsByFilter(numElenets, nameCategory); // hace un llamado al metodo getProjectsByFilter de la clase abstracta Project, para obtener los proyectos que cumplan con el filtro
     }
 }
 
