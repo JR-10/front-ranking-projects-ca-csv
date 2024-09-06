@@ -1,3 +1,4 @@
+import { GetProjectUsecase } from './../../domain/usecase/get-project.usecase';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -10,4 +11,21 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'ranking_front';
+
+
+  constructor(
+    private getProjectUsecase: GetProjectUsecase
+  ) {}
+
+  ngOnInit() {
+    this.getProjectUsecase.getAllProjects().subscribe(
+      (data) => {
+        console.log(data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
 }
